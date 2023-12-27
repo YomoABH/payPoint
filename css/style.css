@@ -1,0 +1,408 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #050731;
+  background-color: rgb(228, 239, 255);
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 36rem 1fr;
+}
+@media (max-width: 1199.98px) {
+  .page {
+    grid-template-columns: 28rem 1fr;
+  }
+}
+@media (max-width: 991.98px) {
+  .page {
+    grid-template-columns: 18rem 1fr;
+  }
+}
+@media (max-width: 767.98px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-cnt {
+  width: 100%;
+  padding: 4.8rem 4.8rem 9.6rem 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+@media (max-width: 1199.98px) {
+  .main-cnt {
+    padding: 3.2rem 3.2rem 8.8rem 3.2rem;
+    gap: 3.2rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .main-cnt {
+    padding: 2.4rem 2.4rem 8.8rem 2.4rem;
+    gap: 2.4rem;
+  }
+}
+
+.content-aria {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.content-aria::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.content-aria::-webkit-scrollbar-thumb {
+  background-color: #b1c7ff;
+  border-radius: 1rem;
+}
+
+.main-title {
+  color: #050731;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 128.571%;
+}
+
+.content-container {
+  padding: 4.8rem;
+  border-radius: 2.4rem;
+  border: 0.1rem solid #e4efff;
+  background: #fff;
+}
+@media (max-width: 1199.98px) {
+  .content-container {
+    padding: 3.2rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .content-container {
+    padding: 2.4rem;
+  }
+}
+
+.navigation-bar {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 6.4rem;
+  overflow-y: scroll;
+  padding: 4.8rem 3.2rem;
+  background: #fff;
+  position: relative;
+  transition: all 0.2s linear;
+}
+@media (max-width: 1199.98px) {
+  .navigation-bar {
+    padding: 3.2rem 2.4rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .navigation-bar {
+    align-items: center;
+    padding: 3.2rem 2.4rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .navigation-bar {
+    position: fixed;
+    left: -100%;
+  }
+}
+.navigation-bar::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.navigation-bar::-webkit-scrollbar-thumb {
+  background-color: #b1c7ff;
+  border-radius: 1rem;
+}
+.navigation-bar__logo {
+  cursor: pointer;
+}
+.navigation-bar__botton-logo {
+  cursor: pointer;
+}
+.navigation-bar__mobile-btn {
+  display: none;
+  position: fixed;
+  left: 16.5rem;
+  top: 50%;
+  height: 5rem;
+  width: 3rem;
+  -webkit-border-top-right-radius: 12px;
+  -webkit-border-bottom-right-radius: 12px;
+  -moz-border-radius-topright: 12px;
+  -moz-border-radius-bottomright: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 0;
+  background-color: #4d49fe;
+  transition: all 0.2s linear;
+}
+.navigation-bar__mobile-btn img {
+  transform: rotate(90deg);
+}
+@media (max-width: 767.98px) {
+  .navigation-bar__mobile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    transform: translate(0%, -50%);
+  }
+}
+.navigation-bar.active {
+  width: 18rem;
+  left: 0;
+}
+.navigation-bar.active .navigation-bar__mobile-btn {
+  left: 18rem;
+  transform: translate(0%, -50%);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.user-info__avatar {
+  width: 7.2rem;
+}
+.user-info__avatar img {
+  width: 100%;
+}
+@media (max-width: 991.98px) {
+  .user-info__wp {
+    display: none;
+  }
+}
+.user-info__fio {
+  font-weight: 600;
+}
+.user-info__seo-id {
+  font-weight: 600;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.navigation-list-item {
+  cursor: pointer;
+}
+.navigation-list-item__link {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.navigation-list-item__icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  transition: all 0.2s;
+}
+.navigation-list-item__icon svg {
+  transition: all 0.2s;
+}
+.navigation-list-item__icon svg.str {
+  fill: transparent;
+  stroke: #000;
+}
+.navigation-list-item__name {
+  font-weight: 600;
+  transition: all 0.2s;
+}
+@media (max-width: 991.98px) {
+  .navigation-list-item__name {
+    display: none;
+  }
+}
+.navigation-list-item.active .navigation-list-item__icon {
+  background-color: #4d49fe;
+}
+.navigation-list-item.active .navigation-list-item__icon svg {
+  fill: #fff;
+}
+.navigation-list-item.active .navigation-list-item__icon svg.str {
+  fill: none;
+  stroke: #fff;
+}
+.navigation-list-item.active .navigation-list-item__name {
+  color: #4d49fe;
+}
+@media (min-width: 991.98px) {
+  .navigation-list-item:hover .navigation-list-item__icon {
+    background-color: #4d49fe;
+    border-radius: 0.8rem;
+  }
+  .navigation-list-item:hover .navigation-list-item__icon svg {
+    fill: #fff;
+  }
+  .navigation-list-item:hover .navigation-list-item__icon svg.str {
+    fill: none;
+    stroke: #fff;
+  }
+  .navigation-list-item:hover .navigation-list-item__name {
+    color: #4d49fe;
+  }
+}
