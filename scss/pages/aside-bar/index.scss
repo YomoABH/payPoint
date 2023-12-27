@@ -184,6 +184,14 @@
          fill: transparent;
          stroke: #000;
       }
+      @media (max-width: $mobile) {
+         svg {
+            transform: scale(1.2);
+         }
+         img {
+            transform: scale(1.2);
+         }
+      }
    }
 
    // .navigation-list-item__name
